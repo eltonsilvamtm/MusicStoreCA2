@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Guitar Center</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/GuitarCenter.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Guitar Center</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Guitar Center Ireland</h1>
+                <p class="lead">Choose your instrument</p>
+            </div>
+            <div id="results" class="col-lg-8 order-2 mb-5"></div>
+            <div class="col-lg-4 order-1">
+                <form id="createProduct" action="javascript:void(0)">
+                    <div class="form-group">
+                        <select class="form-control" id="category">
+                            <option >Guitar</option>
+                            <option >Bass</option>
+                            <option >Microphone</option>
+                            <option >Keyboard</option>
+                        </select>
+                        <input class="form-control mt-3" pattern="^[a-zA-Z\s]+" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Item cannot contain numbers')" type="text" id="item" placeholder="Item" required>
+                         <input class="form-control mt-3" pattern="^[a-zA-Z\s]+" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Item cannot contain numbers')" type="text" id="brand" placeholder="Brand" required>
+                        <input class="form-control mt-3" type="number" step=".01" id="price" placeholder="Price" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Please enter a price')" required>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+                    </div>
+                </form>
+                <button id="delete" class="btn btn-danger btn-block mt-3">Delete</button>
+                <p class="text-muted text-center">To delete an item, please select a row</p>
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">&euro;</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
+                        
+                        <input class="btn btn-block btn-secondary mt-2" type="button" name="btnCalcBill"
+                            value="Total" id="calcBill">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="showDiscount" aria-label="Checkbox for following text input" style="float: left; margin-top: 5px;" >
+                        <p style="margin-left: 25px;" >highlights items with 10% discount</p>
+                    </div>
+                     
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container text-center"><span class="text-muted">&copy; 2020</span></div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/GuitarCenter.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            document.querySelector("#calcBill").addEventListener("click", function() {
+                document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            });
+            document.querySelector("#showDiscount").addEventListener("click", function() {
+                highlightVegetarian('menuTable', this.checked);
+            });
+        });
+    </script>
+</body>
+
+</html>
