@@ -1,7 +1,7 @@
 {
-  "name": "iwa2-test",
+  "name": "musicstoreca2",
   "version": "0.0.1",
-  "description": "my test app for IWA",
+  "description": "Guitar Center Ireland",
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikhail-cct/iwa2-test.git"
+    "url": "git+https://github.com/eltonsilvamtm/MusicStoreCA2.git"
   },
-  "author": "Mikhail",
+  "author": "Elton da Silva",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikhail-cct/iwa2-test/issues"
+    "url": "https://github.com/eltonsilvamtm/MusicStoreCA2/issues"
   },
-  "homepage": "https://github.com/mikhail-cct/iwa2-test#readme",
+  "homepage": "https://github.com/eltonsilvamtm/MusicStoreCA2#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
@@ -26,7 +26,7 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
-    "mongoose": "^5.12.5",
+    "mongoose": "^5.12.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "path": "^0.12.7"
