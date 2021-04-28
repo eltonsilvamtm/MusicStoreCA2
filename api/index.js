@@ -20,7 +20,8 @@ app.listen(port, function(err){
     console.log('Listening on port: ' + port);
 });
 
-const dbURI = "mongodb://localhost/test";
+//link to the database in mongodb atlas
+const dbURI = "mongodb+srv://GuitarCenterIreland:GuitarCenterIreland@musicstore.zjgtm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 //console.log(process.env);
 //const dbURI = process.env.DB_URL;
 
