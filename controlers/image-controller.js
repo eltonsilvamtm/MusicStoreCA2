@@ -1,8 +1,8 @@
 const UPLOAD_PATH = require('../routes/routes').UPLOAD_PATH,
-Image = require('./models/image'),
-path = require('path'),
-fs = require('fs'),
-del = require('del');
+Image = require('../models/image'),
+path = require('../node_modules/path'),
+fs = require('../node_modules/fs'),
+del = require('../node_modules/del');
 
 exports.uploadImage = function(req, res) {
     let newImage = new Image();

@@ -1,11 +1,11 @@
-const http = require('http'),
+const http = require('./node_modules/http'),
 // axios = require('axios'),
-logger = require('morgan'),
-cors = require('cors'),
-express = require('express'),
-bodyParser = require('body-parser'),
-mongoose = require('mongoose'),
-dotenv = require("dotenv");
+logger = require('./node_modules/morgan'),
+cors = require('./node_modules/cors'),
+express = require('./node_modules/express'),
+bodyParser = require('./node_modules/body-parser'),
+mongoose = require('./node_modules/mongoose'),
+dotenv = require("./node_modules/dotenv");
 
 var app = express();
 var port = process.env.PORT || 8000;
@@ -14,7 +14,7 @@ dotenv.config();
 app.use(bodyParser.json());
 app.use(logger('tiny'));
 app.use(cors()); //this allows access from any website
-app.use(require('./routes'));
+app.use(require('./routes/routes.js'));
 
 app.listen(port, function(err){
     console.log('Listening on port: ' + port);

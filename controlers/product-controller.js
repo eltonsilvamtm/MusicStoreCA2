@@ -1,4 +1,4 @@
-var Product = require('./models/products')
+var Product = require('../models/products')
 
 exports.createProduct = function(req, res) { 
     var newproduct = new Product(req.body);

@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('../node_modules/mongoose');
 
 var userSchema = new mongoose.Schema({ 
     email: { type: String, unique: true, lowercase: true},
