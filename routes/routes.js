@@ -1,4 +1,4 @@
-const express = require('express'),
+const express = require('../node_modules/express'),
 router = express.Router();
 
 var
@@ -29,9 +29,9 @@ router.delete('/products/:id', productCtrl.deleteProduct);
 
 module.exports.UPLOAD_PATH = "uploads";
 
-var multer = require("multer");
+var multer = require("../node_modules/multer");
 var upload = multer({ dest: module.exports.UPLOAD_PATH});
-var imageCtrl = require('./image-controller');
+var imageCtrl = require('../controlers/image-controller');
 
 router.post('/images', upload.single('image'), imageCtrl.uploadImage);
 router.get('/images', imageCtrl.getImages);

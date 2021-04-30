@@ -1,10 +1,10 @@
-const http = require('./node_modules/http'),
+const http = require('./node_modules/http/package.json'),
 // axios = require('axios'),
 logger = require('./node_modules/morgan'),
 cors = require('./node_modules/cors'),
 express = require('./node_modules/express'),
 bodyParser = require('./node_modules/body-parser'),
-mongoose = require('./node_modules/mongoose'),
+mongoose = require('./node_modules/mongoose/index'),
 dotenv = require("./node_modules/dotenv");
 
 var app = express();

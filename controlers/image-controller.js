@@ -1,7 +1,7 @@
 const UPLOAD_PATH = require('../routes/routes').UPLOAD_PATH,
 Image = require('../models/image'),
 path = require('../node_modules/path'),
-fs = require('../node_modules/fs'),
+fs = require('../node_modules/fs/package.json'),
 del = require('../node_modules/del');
 
 exports.uploadImage = function(req, res) {
