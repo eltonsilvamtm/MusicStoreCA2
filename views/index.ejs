@@ -11,8 +11,8 @@
     <title>Guitar Center</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/GuitarCenter.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/GuitarCenter.css" rel="stylesheet">
 
 </head>
 
@@ -21,7 +21,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Guitar Center</a>
+            <a class="navbar-brand" href="index.ejs">Guitar Center</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home
+                        <a class="nav-link" href="index.ejs">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -96,10 +96,10 @@
         <div class="container text-center"><span class="text-muted">&copy; 2020</span></div>
     </footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/table.js"></script>
-    <script src="js/GuitarCenter.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/table.js"></script>
+    <script src="./js/GuitarCenter.js"></script>
     <script>
         window.addEventListener("load", function() {
             document.forms[1].txtBillAmt.value = calculateBill('menuTable');

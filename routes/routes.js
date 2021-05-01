@@ -9,11 +9,11 @@ productCtrl = require('../controlers/product-controller');
 // router.get('/hello', itemCtrl.getWorld);
 // router.get('/hello/:foo/:bar', itemCtrl.getWorldParams);
 // router.post('/hello', itemCtrl.postWorld);
-var fx = function(req,res){
-    res.send('pinto');
-};
+// var fx = function(req,res){
+//     res.send('pinto');
+// };
 
-router.get('/', fx);
+// router.get('/', fx);
 
 router.post('/users', userCtrl.createUser);
 router.get('/users', userCtrl.getUsers);

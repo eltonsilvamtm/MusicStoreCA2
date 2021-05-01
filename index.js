@@ -8,6 +8,7 @@ mongoose = require('./node_modules/mongoose/index'),
 dotenv = require("./node_modules/dotenv");
 
 var app = express();
+app.set('view engine', 'ejs'); //registering view engine
 var port = process.env.PORT || 8000;
 dotenv.config();
 
@@ -19,6 +20,11 @@ app.use(require('./routes/routes.js'));
 app.listen(port, function(err){
     console.log('Listening on port: ' + port);
 });
+
+app.get('/',(req,res)=>{
+    res.render('index');
+});
+
 
 //link to the database in mongodb atlas
 const dbURI = "mongodb+srv://GuitarCenterIreland:GuitarCenterIreland@musicstore.zjgtm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
