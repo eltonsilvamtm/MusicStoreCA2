@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 app.use(logger('tiny'));
 app.use(cors()); //this allows access from any website
 app.use(require('./routes/routes.js'));
+app.use('/',express.static('css'));
 
 app.listen(port, function(err){
     console.log('Listening on port: ' + port);
