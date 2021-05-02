@@ -6,7 +6,7 @@ var productSchema = new mongoose.Schema({
     price: Number,
     category: { 
         type: String,
-        enum: ['Guitars', 'Bass', 'Microphones', 'Keys']
+        enum: ['Guitar', 'Bass', 'Microphone', 'Keyboard']
     }  
 },
 { timestamps: true }

@@ -16,7 +16,8 @@ app.use(bodyParser.json());
 app.use(logger('tiny'));
 app.use(cors()); //this allows access from any website
 app.use(require('./routes/routes.js'));
-app.use('/',express.static('css'));
+app.use(express.static('views'));
+
 
 app.listen(port, function(err){
     console.log('Listening on port: ' + port);
@@ -28,7 +29,7 @@ app.get('/',(req,res)=>{
 
 
 //link to the database in mongodb atlas
-const dbURI = "mongodb+srv://GuitarCenterIreland:GuitarCenterIreland@musicstore.zjgtm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const dbURI = "mongodb+srv://<GuitarCenterIreland>:GuitarCenterIreland@musicstore.zjgtm.mongodb.net/MusicStore?retryWrites=true&w=majority";
 //console.log(process.env);
 //const dbURI = process.env.DB_URL;
 

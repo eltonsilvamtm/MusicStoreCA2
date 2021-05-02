@@ -56,7 +56,7 @@
             <div id="results" class="col-lg-8 order-2 mb-5"></div>
             <div class="col-lg-4 order-1">
                 <form id="createProduct" action="javascript:void(0)">
-                    <p class="text-muted text-center" >Create a new product</p>
+                    <p class="text-muted text-center" >Entry to edit</p>
                     <div class="form-group">
                         <select class="form-control" id="category">
                             <option >Guitar</option>
@@ -64,11 +64,11 @@
                             <option >Microphone</option>
                             <option >Keyboard</option>
                         </select>
-                        
                         <input class="form-control mt-3" pattern="^[a-zA-Z\s]+" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Item cannot contain numbers')" type="text" id="item" placeholder="Item" required>
                          <input class="form-control mt-3" pattern="^[a-zA-Z\s]+" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Item cannot contain numbers')" type="text" id="brand" placeholder="Brand" required>
                         <input class="form-control mt-3" type="number" step=".01" id="price" placeholder="Price" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Please enter a price')" required>
-                        <button type="submit" class="btn btn-primary btn-block mt-3">Create</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                         <button id="delete" class="btn btn-danger btn-block mt-3">Delete</button>
                     </div>
                 </form>
             </div>

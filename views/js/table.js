@@ -36,7 +36,7 @@ function draw_table()
 			}
 		});
 	};
-	$.getJSONuncached("https://8000-coffee-grasshopper-s7u4ufb3.ws-eu03.gitpod.io/products")
+	$.getJSONuncached("https://8000-black-opossum-2tt6smv6.ws-eu04.gitpod.io/products")
 };
 
 function select_row()
