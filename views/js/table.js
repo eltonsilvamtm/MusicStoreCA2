@@ -8,22 +8,24 @@ function draw_table()
 			url: url,
 			type: 'GET',
 			cache: false,
-			success: function (html)
+			success: function (ejs)
 			{
                 //table that will be displayed on the webpage
                 var tableStart = `<table>
                             <thead>
-                            <tr><th>Category</th><th>Brand</th><th>Item</th><th>Price</th>
+                            <tr>
+                            <th>Category</th><th>Brand</th><th>Item</th><th>Price</th><th>Action</th>
                             </tr>
                             </thead>
                             <tbody>`;
                 var rows = ``;
-                for(var i in html){ //
+                for(var i in ejs){ //
                 rows += `<tr>
-                            <td>${html[i].category}</td>
-                            <td>${html[i].brand}</td>
-                            <td>${html[i].item}</td>
-                            <td>${html[i].price}</td>
+                            <td>${ejs[i].category}</td>
+                            <td>${ejs[i].brand}</td>
+                            <td>${ejs[i].item}</td>
+                            <td>${ejs[i].price}</td>
+                            <td></td>
                             </tr>`;
             }
 
